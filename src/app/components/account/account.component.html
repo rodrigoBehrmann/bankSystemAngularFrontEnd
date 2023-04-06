@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TIVIC Bank</title>
+	<link rel="stylesheet" href="account.component.css">
+</head>
+<body class="bg-blue">
+	<div class="container">
+		<img class="logo" src="assets/tivic.png" alt="Logo da minha empresa">
+		<h1>TIVIC Bank</h1>
+		<h2>Olá, Rodrigo</h2>
+		<p>Saldo atual: {{balance.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}}</p>
+
+    <div class="input-container">
+      <h3>R$ </h3>
+      <input type="text" [(ngModel)]="value" id="valorInput" />
+    </div>
+
+
+    <button class="bank-btn" (click)="getBalance()">
+      <h5> Consultar Saldo </h5>
+    </button>
+
+    <button class="bank-btn" (click)="deposit()">
+      <h5> Depositar Dinheiro  </h5>
+    </button>
+
+    <button class="bank-btn" (click)="withdraw()">
+      <h5> Sacar Dinheiro  </h5>
+    </button>
+
+	</div>
+</body>
+</html>
